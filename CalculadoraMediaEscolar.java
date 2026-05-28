@@ -35,6 +35,16 @@ public class CalculadoraMediaEscolar {
         System.out.println("Nota 1: " + nota1 + " | Nota 2: " + nota2);
         System.out.println("Média final: " + df.format(media));
 
+        // Situação do aluno
+        if (media >= 7) {
+            System.out.println("Situação: APROVADO");
+        } else if (media >= 5) {
+            System.out.println("Situação: RECUPERAÇÃO");
+        } else {
+            System.out.println("Situação: REPROVADO");
+        }
+        System.out.println("----------------------------");
+        
         entrada.close();
     }
 }
