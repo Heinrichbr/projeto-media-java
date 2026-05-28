@@ -21,7 +21,20 @@ public class CalculadoraMediaEscolar {
         }
         
         //Parte2 NOTA
-        
+        System.out.print("Digite a 2ª nota de " + nomeAluno + ": ");
+        double nota2 = entrada.nextDouble();
+        while (nota2 < 0 || nota2 > 10) {
+            System.out.print("Nota inválida! Digite uma nota entre 0 e 10: ");
+            nota2 = entrada.nextDouble();
+        }
+
+        double media = (nota1 + nota2) / 2;
+
+        System.out.println("\n----------------------------");
+        System.out.println("Aluno: " + nomeAluno);
+        System.out.println("Nota 1: " + nota1 + " | Nota 2: " + nota2);
+        System.out.println("Média final: " + df.format(media));
+
         entrada.close();
     }
 }
